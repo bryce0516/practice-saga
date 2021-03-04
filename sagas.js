@@ -19,7 +19,8 @@ export function* watchIncrementAsync() {
 
 export function* fetchData(action) {
   try {
-    const data = yield call()
+    const data = yield call(callApi)
+    yield put({ type:'FETCH', data})
   } catch(error) {
     console.error(error)
   }

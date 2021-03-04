@@ -1,12 +1,12 @@
 /*eslint-disable no-unused-vars */
-import React, { Component, PropTypes, useEffect } from 'react'
-import callApi from './api'
-const Counter = ({ value, onIncrement, onDecrement, onIncrementAsync }) => {
+import React, { Component, PropTypes } from 'react'
+import {callApi} from './api'
+const Counter = ({ value, onIncrement, onDecrement, onIncrementAsync, onApi }) => {
   const clicksomthing = () => {
-    setState('change')
+    callApi()
     console.log('works')
   }
-  const [state, setState] = useState('hello')
+
   return (
     <div>
       <button onClick={onIncrementAsync}>
@@ -20,8 +20,8 @@ const Counter = ({ value, onIncrement, onDecrement, onIncrementAsync }) => {
         Decrement
       </button>
       {' '}
-      <button onClick={clicksomthing}>
-        {state}
+      <button onClick={onApi}>
+        api
       </button>
       <hr />
       <div>

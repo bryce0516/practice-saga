@@ -26,6 +26,7 @@ function render() {
       onIncrement={() => action('INCREMENT')}
       onDecrement={() => action('DECREMENT')} 
       onIncrementAsync={() => action('INCREMENT_ASYNC')}
+      onApi={() => action('FETCH')}
     />,
     document.getElementById('root')
   )
