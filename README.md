@@ -12,6 +12,8 @@ git clone https://github.com/redux-saga/redux-saga-beginner-tutorial.git
 cd redux-saga-beginner-tutorial
 
 npm install
+
+json-server --watch db.json --port 3001
 ```
 
 Run the demo
